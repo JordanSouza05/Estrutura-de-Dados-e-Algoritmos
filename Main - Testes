@@ -1,0 +1,45 @@
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("=== TesteVetor4 — Testar limpar() ===");
+        Vetor tv4 = new Vetor(10);
+        tv4.adicionar("Arthur");
+        tv4.adicionar("Jordan");
+        tv4.adicionar("Alan");
+        System.out.println("Antes de limpar:");
+        tv4.imprimir();
+        tv4.limpar();
+        System.out.println("Depois de limpar:");
+        tv4.imprimir();
+
+        System.out.println("\n=== TesteVetor5 — Testar contarOcorrencias() ===");
+        Vetor tv5 = new Vetor(10);
+        tv5.adicionar("Arthur");
+        tv5.adicionar("Jordan");
+        tv5.adicionar("Arthur");
+        tv5.adicionar("Alan");
+        tv5.adicionar("Arthur");
+        System.out.println("Vetor atual:");
+        tv5.imprimir();
+        System.out.println("Ocorrências de 'Arthur': " + tv5.contarOcorrencias("Arthur"));
+        System.out.println("Ocorrências de 'Jordan': " + tv5.contarOcorrencias("Jordan"));
+        System.out.println("Ocorrências de 'Alan': " + tv5.contarOcorrencias("Alan"));
+        System.out.println("Ocorrências de 'Lucas': " + tv5.contarOcorrencias("Lucas"));
+
+        System.out.println("\n=== TesteVetor6 — Testar substituir() ===");
+        Vetor tv6 = new Vetor(10);
+        tv6.adicionar("Arthur");
+        tv6.adicionar("Jordan");
+        tv6.adicionar("Alan");
+        System.out.println("Vetor antes de substituir:");
+        tv6.imprimir();
+
+        boolean substituiu1 = tv6.substituir("Jordan", "Lucas");
+        System.out.println("Substituiu 'Jordan' por 'Lucas'? " + substituiu1);
+        tv6.imprimir();
+
+        boolean substituiu2 = tv6.substituir("Pedro", "Mateus");
+        System.out.println("Tentou substituir 'Pedro' por 'Mateus'? " + substituiu2);
+        tv6.imprimir();
+    }
+}
