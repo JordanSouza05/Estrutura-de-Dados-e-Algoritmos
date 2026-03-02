@@ -1,0 +1,40 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== TesteVetor1 ===");
+        TesteVetor tv1 = new TesteVetor();
+        tv1.adicionar("Arthur");
+        tv1.adicionar("Jordan");
+        tv1.adicionar("Alan");
+        System.out.println("Tamanho: " + tv1.tamanho());
+        System.out.print("Vetor completo: ");
+        tv1.imprimir();
+        System.out.println("Elementos um por linha:");
+        tv1.imprimirElementos();
+
+        System.out.println("\n=== TesteVetor2 ===");
+        TesteVetor tv2 = new TesteVetor();
+        tv2.adicionar("Arthur");
+        tv2.adicionar("Jordan");
+        tv2.adicionar("Alan");
+        tv2.adicionar("Lucas");
+        System.out.println("Buscar 'Jordan': índice " + tv2.buscar("Jordan"));
+        System.out.println("Conter 'Pedro'? " + tv2.contem("Pedro"));
+        System.out.println("Conter 'Arthur'? " + tv2.contem("Arthur"));
+
+        System.out.println("\n=== TesteVetor3 ===");
+        TesteVetor tv3 = new TesteVetor();
+        try {
+            System.out.println("Último elemento: " + tv3.ultimo());
+        } catch (Exception e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+        tv3.adicionar("Arthur");
+        tv3.adicionar("Jordan");
+        tv3.adicionar("Alan");
+        try {
+            System.out.println("Último elemento após adicionar: " + tv3.ultimo());
+        } catch (Exception e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+    }
+}
