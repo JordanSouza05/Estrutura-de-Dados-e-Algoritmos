@@ -1,0 +1,23 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        Vetor vetor = new Vetor(5);
+
+        System.out.println("O vetor está vazio? " + vetor.estaVazia());
+
+        vetor.adicionar("Java");
+        vetor.adicionar("Python");
+        vetor.adicionar("C++");
+
+        System.out.println("\nÚltimo elemento do vetor: " + vetor.ultimo());
+
+        System.out.println("\nElementos do vetor:");
+        vetor.imprimeUmPorLinha();
+
+        System.out.println("\nO vetor contém 'Java'? " + vetor.contem("Java"));
+        System.out.println("O vetor contém 'Ruby'? " + vetor.contem("Ruby"));
+
+        System.out.println("\nO vetor está vazio agora? " + vetor.estaVazia());
+    }
+}
