@@ -1,0 +1,27 @@
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("=== Teste Métodos Adicionais com Vetor ===");
+        Vetor v = new Vetor(10);
+        v.adicionar("Arthur");
+        v.adicionar("Jordan");
+        v.adicionar("Alan");
+        v.adicionar("Arthur");
+        v.adicionar("Jordan");
+
+        System.out.println("Vetor inicial:");
+        v.imprimir();
+
+        System.out.println("Ocorrências de 'Arthur': " + v.contarOcorrencias("Arthur"));
+        System.out.println("Ocorrências de 'Jordan': " + v.contarOcorrencias("Jordan"));
+        System.out.println("Ocorrências de 'Alan': " + v.contarOcorrencias("Alan"));
+        System.out.println("Ocorrências de 'Lucas': " + v.contarOcorrencias("Lucas"));
+
+        boolean substituiu = v.substituir("Jordan", "Lucas");
+        System.out.println("Substituiu 'Jordan' por 'Lucas'? " + substituiu);
+        v.imprimir();
+
+        v.limpar();
+        System.out.println("Vetor após limpar:");
+        v.imprimir();
+    }
+}
