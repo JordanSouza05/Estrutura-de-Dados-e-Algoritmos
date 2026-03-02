@@ -1,42 +1,57 @@
-import java.util.ArrayList;
-
 public class TesteVetor {
-    private ArrayList<String> vetor;
+    private String[] vetor;
+    private int tamanhoAtual;
 
-    public TesteVetor() {
-        this.vetor = new ArrayList<>();
+    public TesteVetor(int capacidade) {
+        this.vetor = new String[capacidade];
+        this.tamanhoAtual = 0;
     }
-
     public void adicionar(String elemento) {
-        vetor.add(elemento);
-    }
-
-    public int tamanho() {
-        return vetor.size();
-    }
-
-    public void imprimir() {
-        System.out.println(vetor);
-    }
-
-    public void imprimirElementos() {
-        for (String elemento : vetor) {
-            System.out.println(elemento);
+        if (tamanhoAtual < vetor.length) {
+            vetor[tamanhoAtual] = elemento;
+            tamanhoAtual++;
+        } else {
+            System.out.println("Erro: vetor cheio!");
         }
     }
-
+    public int tamanho() {
+        return tamanhoAtual;
+    }
+    public void imprimir() {
+        System.out.print("[");
+        for (int i = 0; i < tamanhoAtual; i++) {
+            System.out.print(vetor[i]);
+            if (i < tamanhoAtual - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
+    public void imprimirElementos() {
+        for (int i = 0; i < tamanhoAtual; i++) {
+            System.out.println(vetor[i]);
+        }
+    }
     public boolean contem(String elemento) {
-        return vetor.contains(elemento);
+        for (int i = 0; i < tamanhoAtual; i++) {
+            if (vetor[i].equals(elemento)) {
+                return true;
+            }
+        }
+        return false;
     }
-
     public int buscar(String elemento) {
-        return vetor.indexOf(elemento);
+        for (int i = 0; i < tamanhoAtual; i++) {
+            if (vetor[i].equals(elemento)) {
+                return i;
+            }
+        }
+        return -1;
     }
-
     public String ultimo() throws Exception {
-        if (vetor.isEmpty()) {
+        if (tamanhoAtual == 0) {
             throw new Exception("O vetor está vazio!");
         }
-        return vetor.get(vetor.size() - 1);
+        return vetor[tamanhoAtual - 1];
     }
 }
