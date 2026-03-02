@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+
+public class TesteVetor {
+    private ArrayList<String> vetor;
+
+    public TesteVetor() {
+        this.vetor = new ArrayList<>();
+    }
+
+    public void adicionar(String elemento) {
+        vetor.add(elemento);
+    }
+
+    public int tamanho() {
+        return vetor.size();
+    }
+
+    public void imprimir() {
+        System.out.println(vetor);
+    }
+
+    public void imprimirElementos() {
+        for (String elemento : vetor) {
+            System.out.println(elemento);
+        }
+    }
+
+    public boolean contem(String elemento) {
+        return vetor.contains(elemento);
+    }
+
+    public int buscar(String elemento) {
+        return vetor.indexOf(elemento);
+    }
+
+    public String ultimo() throws Exception {
+        if (vetor.isEmpty()) {
+            throw new Exception("O vetor está vazio!");
+        }
+        return vetor.get(vetor.size() - 1);
+    }
+}
