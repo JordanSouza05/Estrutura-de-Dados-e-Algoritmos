@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("=== TesteVetor1 ===");
-        TesteVetor tv1 = new TesteVetor();
+        TesteVetor tv1 = new TesteVetor(10);
         tv1.adicionar("Arthur");
         tv1.adicionar("Jordan");
         tv1.adicionar("Alan");
@@ -12,7 +12,7 @@ public class Main {
         tv1.imprimirElementos();
 
         System.out.println("\n=== TesteVetor2 ===");
-        TesteVetor tv2 = new TesteVetor();
+        TesteVetor tv2 = new TesteVetor(10);
         tv2.adicionar("Arthur");
         tv2.adicionar("Jordan");
         tv2.adicionar("Alan");
@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Conter 'Arthur'? " + tv2.contem("Arthur"));
 
         System.out.println("\n=== TesteVetor3 ===");
-        TesteVetor tv3 = new TesteVetor();
+        TesteVetor tv3 = new TesteVetor(10);
         try {
             System.out.println("Último elemento: " + tv3.ultimo());
         } catch (Exception e) {
