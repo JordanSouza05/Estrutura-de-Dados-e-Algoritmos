@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        MinhaLista lista = new MinhaLista();
+
+        lista.adiciona("Maçã");
+        lista.adiciona("Banana");
+        lista.adiciona("Laranja");
+        lista.adiciona("Uva");
+
+        System.out.println("Lista inicial:");
+        lista.imprimir();
+
+        System.out.println("\nRemovendo 'Banana': " + lista.remove("Banana"));
+        lista.imprimir();
+
+        System.out.println("\nTentando remover 'Pera': " + lista.remove("Pera"));
+        lista.imprimir();
+    }
+}
