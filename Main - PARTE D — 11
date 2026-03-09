@@ -1,0 +1,21 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        Vetor vetor = new Vetor(10);
+
+        vetor.adiciona("A");
+        vetor.adiciona("B");
+        vetor.adiciona("C");
+        vetor.adiciona("D");
+        vetor.adiciona("E");
+
+        System.out.println("Antes da remoção:");
+        vetor.imprime();
+
+        vetor.remove(2); // remove posição 2 (C)
+
+        System.out.println("Depois da remoção:");
+        vetor.imprime();
+    }
+}
