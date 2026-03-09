@@ -1,0 +1,45 @@
+public class TesteVetor7 {
+
+    public static void main(String[] args) {
+
+        Vetor vetor = new Vetor(10);
+
+        vetor.add("A");
+        vetor.add("B");
+        vetor.add("C");
+        vetor.add("D");
+        vetor.add("E");
+
+        System.out.println("Inicial:");
+        vetor.imprimir();
+        System.out.println("Tamanho: " + vetor.getTamanho());
+        System.out.println();
+
+
+        vetor.remove(0);
+        System.out.println("Após remover posição 0:");
+        vetor.imprimir();
+        System.out.println("Tamanho: " + vetor.getTamanho());
+        System.out.println();
+
+        vetor.remove(1);
+        System.out.println("Após remover posição do meio:");
+        vetor.imprimir();
+        System.out.println("Tamanho: " + vetor.getTamanho());
+        System.out.println();
+
+
+        vetor.remove(vetor.getTamanho() - 1);
+        System.out.println("Após remover última posição:");
+        vetor.imprimir();
+        System.out.println("Tamanho: " + vetor.getTamanho());
+        System.out.println();
+
+
+        try {
+            vetor.remove(10);
+        } catch (RuntimeException e) {
+            System.out.println("Exceção capturada: " + e.getMessage());
+        }
+    }
+}
