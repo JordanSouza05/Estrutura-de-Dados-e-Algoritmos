@@ -1,0 +1,68 @@
+public class MinhaLista {
+    private String[] elementos;
+    private int tamanho;
+
+
+    public MinhaLista() {
+        elementos = new String[2]; // capacidade inicial pequena, cresce conforme necessário
+        tamanho = 0;
+    }
+
+
+    public boolean adiciona(String elemento) {
+        if (tamanho == elementos.length) {
+            aumentaCapacidade();
+        }
+        elementos[tamanho] = elemento;
+        tamanho++;
+        return true;
+    }
+
+    private void aumentaCapacidade() {
+        String[] novos = new String[elementos.length * 2];
+        for (int i = 0; i < elementos.length; i++) {
+            novos[i] = elementos[i];
+        }
+        elementos = novos;
+    }
+
+
+    public int busca(String elemento) {
+        for (int i = 0; i < tamanho; i++) {
+            if (elementos[i].equals(elemento)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
+    public boolean remove(int posicao) {
+        if (posicao < 0 || posicao >= tamanho) {
+            return false;
+        }
+        for (int i = posicao; i < tamanho - 1; i++) {
+            elementos[i] = elementos[i + 1];
+        }
+        elementos[tamanho - 1] = null;
+        tamanho--;
+        return true;
+    }
+
+
+    public boolean remove(String elemento) {
+        int posicao = busca(elemento);
+        if (posicao == -1) {
+            return false;
+        }
+        return remove(posicao);
+    }
+
+
+    public void imprimir() {
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print(elementos[i] + " ");
+        }
+        System.out.println();
+    }
+}
