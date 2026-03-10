@@ -1,0 +1,34 @@
+public class MainTeste12B {
+
+    public static void main(String[] args) {
+
+        String[] vetor = {"A", "B", "C", "B", "D"};
+
+        System.out.println("Antes:");
+
+        for (String v : vetor) {
+            System.out.print(v + " ");
+        }
+
+        System.out.println();
+
+        boolean removido = RemoveElemento.remove(vetor, "B");
+
+        System.out.println("Removeu B? " + removido);
+
+        for (String v : vetor) {
+
+            if (v != null) {
+                System.out.print(v + " ");
+            }
+
+        }
+
+        System.out.println();
+
+        removido = RemoveElemento.remove(vetor, "X");
+
+        System.out.println("Removeu X? " + removido);
+
+    }
+}
