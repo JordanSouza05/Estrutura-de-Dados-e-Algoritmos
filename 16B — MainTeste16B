@@ -1,0 +1,18 @@
+public class MainTeste16B {
+
+    public static void main(String[] args) {
+
+        String[] vetor = {"A", "C", "D"};
+
+        vetor = InserirDepois.inserirDepois(vetor, "A", "B");
+
+        System.out.println("Vetor após inserir:");
+
+        for (String v : vetor) {
+
+            System.out.print(v + " ");
+
+        }
+
+    }
+}
