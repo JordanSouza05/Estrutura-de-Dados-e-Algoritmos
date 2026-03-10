@@ -1,1 +1,17 @@
+public class AdicionarSeNaoExiste {
 
+    public static boolean existe(String[] vetor, String elemento) {
+
+        for (String v : vetor) {
+
+            if (v != null && v.equals(elemento)) {
+                return true;
+            }
+
+        }
+
+        return false;
+
+    }
+
+}
