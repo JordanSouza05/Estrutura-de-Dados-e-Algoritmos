@@ -1,0 +1,29 @@
+public class MainTeste15B {
+
+    public static void main(String[] args) {
+
+        String[] vetor = new String[5];
+
+        vetor[0] = "A";
+        vetor[1] = "B";
+
+        String novo = "A";
+
+        if (!AdicionarSeNaoExiste.existe(vetor, novo)) {
+
+            vetor[2] = novo;
+
+        }
+
+        System.out.println("Conteúdo do vetor:");
+
+        for (String v : vetor) {
+
+            if (v != null) {
+                System.out.print(v + " ");
+            }
+
+        }
+
+    }
+}
