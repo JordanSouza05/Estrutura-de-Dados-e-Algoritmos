@@ -1,0 +1,28 @@
+public class InserirDepois {
+
+    public static String[] inserirDepois(String[] vetor, String referencia, String novo) {
+
+        String[] novoVetor = new String[vetor.length + 1];
+
+        int j = 0;
+
+        for (int i = 0; i < vetor.length; i++) {
+
+            novoVetor[j] = vetor[i];
+
+            if (vetor[i].equals(referencia)) {
+
+                j++;
+                novoVetor[j] = novo;
+
+            }
+
+            j++;
+
+        }
+
+        return novoVetor;
+
+    }
+
+}
