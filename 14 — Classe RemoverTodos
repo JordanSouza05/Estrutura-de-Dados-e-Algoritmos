@@ -1,0 +1,23 @@
+public class RemoverTodos {
+
+    public static String[] removerTodos(String[] vetor, String elemento) {
+
+        String[] novo = new String[vetor.length];
+        int j = 0;
+
+        for (int i = 0; i < vetor.length; i++) {
+
+            if (!vetor[i].equals(elemento)) {
+
+                novo[j] = vetor[i];
+                j++;
+
+            }
+
+        }
+
+        return novo;
+
+    }
+
+}
