@@ -1,0 +1,12 @@
+public class MainTeste13B {
+
+    public static void main(String[] args) {
+
+        String[] vetor = {"A", "B", "C", "B", "D", "B"};
+
+        int indice = IndiceUltimo.indiceUltimo(vetor, "B");
+
+        System.out.println("Última ocorrência de B: " + indice);
+
+    }
+}
