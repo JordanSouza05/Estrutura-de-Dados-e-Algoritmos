@@ -1,0 +1,20 @@
+public class MainTeste14B {
+
+    public static void main(String[] args) {
+
+        String[] vetor = {"A", "B", "C", "B", "D", "B"};
+
+        vetor = RemoverTodos.removerTodos(vetor, "B");
+
+        System.out.println("Vetor após remover B:");
+
+        for (String v : vetor) {
+
+            if (v != null) {
+                System.out.print(v + " ");
+            }
+
+        }
+
+    }
+}
