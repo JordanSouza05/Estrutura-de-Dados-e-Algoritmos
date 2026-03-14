@@ -13,7 +13,7 @@ public class Main {
         System.out.println("Antes da remoção:");
         vetor.imprime();
 
-        vetor.remove(2); // remove posição 2 (C)
+        vetor.remove(2);
 
         System.out.println("Depois da remoção:");
         vetor.imprime();
