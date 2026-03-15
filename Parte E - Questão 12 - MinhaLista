@@ -4,7 +4,7 @@ public class MinhaLista {
 
 
     public MinhaLista() {
-        elementos = new String[2]; // capacidade inicial pequena, cresce conforme necessário
+        elementos = new String[2];
         tamanho = 0;
     }
 
